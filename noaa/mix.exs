@@ -3,6 +3,7 @@ defmodule Noaa.Mixfile do
 
   def project do
     [app: :noaa,
+     escript: escript_config,
      version: "0.1.0",
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
@@ -31,5 +32,9 @@ defmodule Noaa.Mixfile do
     [
       {:httpoison, ">= 0.0.0"}
     ]
+  end
+
+  def escript_config do
+    [ main_module: NOAA.CLI ]
   end
 end

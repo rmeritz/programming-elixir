@@ -4,7 +4,7 @@ defmodule NOAA.CLI do
   up display the latest weather at a given location.
   """
 
-  def run(argv) do
+  def main(argv) do
     argv
     |> parse_args
     |> process
